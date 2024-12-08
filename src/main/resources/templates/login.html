@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="">
 <head>
-    <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Вход</title>
 </head>
 <body>
-<form action="/login" method="post">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
-
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
-
-    <button type="submit">Login</button>
+<h2>Войти</h2>
+<form th:action="@{/perform_login}" method="post">
+    <div th:if="${param.error}">
+        Неверное имя пользователя или пароль
+    </div>
+    <div>
+        <label>Имя пользователя: <input type="text" name="username"/></label>
+    </div>
+    <div>
+        <label>Пароль: <input type="password" name="password"/></label>
+    </div>
+    <div>
+        <input type="submit" value="Войти"/>
+    </div>
+    <a th:href="@{/auth/register}">Регистрация</a>
 </form>
 </body>
 </html>
