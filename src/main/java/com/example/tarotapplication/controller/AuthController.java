@@ -36,7 +36,6 @@ public class AuthController {
     public String registerUser(@Valid User user, BindingResult bindingResult,
                                Model model, RedirectAttributes redirectAttributes) {
         if (bindingResult.hasErrors()) {
-            // Если есть ошибки валидации, вернуть форму регистрации
             return "register";
         }
 

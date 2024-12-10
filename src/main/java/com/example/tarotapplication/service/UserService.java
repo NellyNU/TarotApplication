@@ -2,15 +2,18 @@ package com.example.tarotapplication.service;
 
 import com.example.tarotapplication.model.User;
 import com.example.tarotapplication.repository.UserRepository;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class UserService {
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     @Transactional
@@ -20,15 +23,13 @@ public class UserService {
             throw new RuntimeException("Пользователь с таким именем уже существует");
         }
 
-        // Проверка существования email (если требуется)
         if (userRepository.findByEmail(user.getEmail()) != null) {
             throw new RuntimeException("Пользователь с таким email уже существует");
         }
 
-        // Пароль сохраняется "как есть", шифрование удалено
-        user.setPassword(user.getPassword());
+        // Шифруем пароль перед сохранением
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
 
-        // Сохранение пользователя
         return userRepository.save(user);
     }
 }
