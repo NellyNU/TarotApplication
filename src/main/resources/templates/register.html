@@ -26,7 +26,7 @@
         id="account-form-fields"
       >
         <div class="input_form">
-          <p>Name</p>
+          <p>Name:</p>
           <input type="text" th:field="*{username}" required />
           <span th:errors="*{username}" class="error"></span>
         </div>
@@ -36,13 +36,13 @@
           <span th:errors="*{email}" class="error"></span>
         </div>
         <div class="input_form">
-          <p>Password</p>
+          <p>Password:</p>
           <input type="password" th:field="*{password}" required />
           <span th:errors="*{password}" class="error"></span>
         </div>
-        <div class="buttons">
-          <button id="generate-button" type="submit">Create</button>
-        </div>
+        <button class="button-spec" id="generate-button" type="submit">
+          Create
+        </button>
       </form>
     </div>
   </body>
