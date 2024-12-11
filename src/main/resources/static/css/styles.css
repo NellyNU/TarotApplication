@@ -92,14 +92,14 @@ a {
 }
 .buttons {
   margin-top: 20px;
-  width: 300px;
+  width: 320px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .button-spec {
   margin-top: 20px;
-  width: 300px;
+  width: 320px;
   display: flex;
   justify-content: center;
   align-items: center;
