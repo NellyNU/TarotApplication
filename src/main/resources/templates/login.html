@@ -17,7 +17,7 @@
 
   <body>
     <div class="container">
-      <h2>Log in</h2>
+      <h2>Login</h2>
       <form
         id="account-form-fields"
         th:action="@{/perform_login}"
@@ -36,7 +36,7 @@
         </div>
         <div class="buttons">
           <button id="generate-button" type="submit">Log in</button>
-          <a th:href="@{/auth/register}">Sign up</a>
+          <button><a th:href="@{/auth/register}">Sign up</a></button>
         </div>
       </form>
     </div>
