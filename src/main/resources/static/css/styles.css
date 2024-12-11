@@ -1,26 +1,27 @@
 body {
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image:url("https://cdn.pixabay.com/photo/2017/09/18/15/38/moon-2762111_1280.jpg") ;
+    background-image: url("https://i.pinimg.com/originals/0b/33/df/0b33dfc105c1a9a00d2c333ddb8159c7.jpg");
+    background-size: cover;
     background-position: center;
-    width: 100vw;
-    background-size:contain;
 }
 
 .container {
-    width: 1000px;
+    width: 100px;
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 50px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #9c3600;
+    border: 1px solid #af6df6;
+    border-radius: 8px;
+    background: #2B0038;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: #FFD700;
 }
 
 .hidden {
@@ -34,12 +35,12 @@ button {
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background: #c59f8a;
+    background: #FFD700;
     color: rgb(177, 109, 64);
 }
 
 button:hover {
-    background: #d5caad;
+    background: #DAA520;
 }
 
 .back-btn {
@@ -57,5 +58,5 @@ button:hover {
     color: #333;
 }
 a {
-    color: rgb(112, 66, 35);
+    color: rgb(177, 109, 64);
 }

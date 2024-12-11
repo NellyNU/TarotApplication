@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle, #0A0E3D, #2B0038, #000000);
+    color: #FFF;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+    background-color: #2B0038;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+
+h1 {
+    color: #FFD700;
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+}
+
+main {
+    margin: 20px;
+}
+
+.table {
+    margin: 50px auto;
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background: #654321;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 223, 0, 0.7);
+    opacity: 0;
+    animation: fadeInTable 1s forwards;
+}
+@keyframes fadeInTable {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+
+
+}
+.card {
+    width: 100px;
+    height: 150px;
+    position: relative;
+    perspective: 1000px;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeInCard 1s forwards;
+}
+@keyframes fadeInCard {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.card:nth-child(1) { animation-delay: 0.2s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+.card:nth-child(4) { animation-delay: 0.8s; }
+.card:nth-child(5) { animation-delay: 1s; }
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+
+.card-front,
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    border: 2px solid #DAA520;
+}
+
+
+.card-front {
+    background:url('back_side.png') ;
+    background-size: contain;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+
+.card-back {
+    background-size: contain;
+    transform: rotateY(180deg);
+    color: #000;
+    border: 2px solid #654321;
+}
+
+
+.prediction {
+    margin-top: 30px;
+    padding: 20px;
+    background: #F5DEB3;
+    border-radius: 10px;
+    color: #654321;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.prediction h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #DAA520;
+}
+
+.prediction p {
+    font-size: 18px;
+    font-style: italic;
+    color: #1d1d1d;
+}
+
+
+.controls button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #FFD700;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.controls button:hover {
+    background-color: #DAA520;
+    color: #FFF;
+}
+
