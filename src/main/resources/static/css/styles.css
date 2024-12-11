@@ -4,6 +4,7 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 100vh;
   background-image: url("https://i.pinimg.com/originals/0b/33/df/0b33dfc105c1a9a00d2c333ddb8159c7.jpg");
   background-size: cover;
@@ -11,7 +12,7 @@ body {
 }
 
 .container {
-  margin-top: 30%;
+  margin-top: -100px;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -86,9 +87,9 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 5px;
 }
 .buttons button:nth-child(2) {
+  margin-left: 10px;
   border: 2px solid #ffd700;
   background-color: transparent;
 }
