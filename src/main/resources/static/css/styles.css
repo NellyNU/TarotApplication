@@ -1,0 +1,61 @@
+body {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image:url("https://cdn.pixabay.com/photo/2017/09/18/15/38/moon-2762111_1280.jpg") ;
+    background-position: center;
+    width: 100vw;
+    background-size:contain;
+}
+
+.container {
+    width: 1000px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #9c3600;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #c59f8a;
+    color: rgb(177, 109, 64);
+}
+
+button:hover {
+    background: #d5caad;
+}
+
+.back-btn {
+    background: #6c757d;
+}
+
+.back-btn:hover {
+    background: #495057;
+}
+
+#tarot-output {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+a {
+    color: rgb(112, 66, 35);
+}

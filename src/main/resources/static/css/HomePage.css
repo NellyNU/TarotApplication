@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle, #0A0E3D, #2B0038, #000000);
+}
+
+.container {
+    width: 400px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #af6df6;
+    border-radius: 8px;
+    background: #2B0038;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: #FFD700;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #FFD700;
+    color: rgb(177, 109, 64);
+}
+
+button:hover {
+    background: #DAA520;
+}
+
+.back-btn {
+    background: #6c757d;
+}
+
+.back-btn:hover {
+    background: #495057;
+}
+
+#tarot-output {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+a {
+    color: rgb(177, 109, 64);
+    text-decoration: none;
+}
+
+.user-info {
+    margin-bottom: 20px;
+}
+
+.user-info h2 {
+    color: #FFD700;
+}
+
+.user-info p {
+    color: #af6df6;
+}

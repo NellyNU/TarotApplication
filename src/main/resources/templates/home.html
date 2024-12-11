@@ -1,11 +1,31 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
-    <title>Домашняя страница</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oriental Beauty</title>
+    <link rel="stylesheet" th:href="@{/css/HomePage.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
-<h1>Здравствуйте мои маленькие любители экстремизма!</h1>
-<p>Вы успешно вошли в систему</p>
-<a th:href="@{/logout}">Выйти</a>
+<div class="container">
+    <h1>Main Menu</h1>
+
+    <div class="user-info">
+        <h2>Welcome, <span th:text="${user.username}">User</span>!</h2>
+        <p>Email: <span th:text="${user.email}">user@example.com</span></p>
+    </div>
+
+    <a th:href="@{/cards}">
+        <button>See the Cards</button>
+    </a>
+
+    <form th:action="@{/logout}" method="post">
+        <button type="submit">Logout</button>
+    </form>
+</div>
 </body>
 </html>

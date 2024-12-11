@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarot</title>
+    <link rel="stylesheet" th:href="@{/css/HomePage.css}">
+</head>
+<body>
+    <audio id="music">
+        <source src="/music.mp3" type="audio/ogg">
+    </audio>
+        <header>
+            <h1>Velum Futurum</h1>
+        </header>
+    <main>
+        <div class="table">
+            <div class="cards">
+                <div class="card" onclick="flipCard(this); ">
+                    <div class="card-inner">
+                        <div class="card-front"></div>
+                        <div class="card-back"></div>
+                    </div>
+                </div>
+                <div class="card" onclick="flipCard(this);">
+                    <div class="card-inner">
+                        <div class="card-front"></div>
+                        <div class="card-back"></div>
+                    </div>
+                </div>
+                <div class="card" onclick="flipCard(this);">
+                    <div class="card-inner">
+                        <div class="card-front"></div>
+                        <div class="card-back"></div>
+                    </div>
+                </div>
+                <div class="card" onclick="flipCard(this);">
+                    <div class="card-inner">
+                        <div class="card-front"></div>
+                        <div class="card-back"></div>
+                    </div>
+                </div>
+                <div class="card" onclick="flipCard(this);">
+                    <div class="card-inner">
+                        <div class="card-front"></div>
+                        <div class="card-back"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <button onclick="resetCards()">Reset</button>
+            </div>
+            <div class="prediction">
+                <h2>Your prediction:</h2>
+                <p id="test"></p>
+                <p id="prediction-text">turn the cards</p>
+            </div>
+        </div>
+    </main>
+    
+    <script src="/static/js/code.js"></script>
+</body>
+</html>

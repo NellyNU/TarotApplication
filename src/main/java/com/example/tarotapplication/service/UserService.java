@@ -27,7 +27,7 @@ public class UserService {
             throw new RuntimeException("Пользователь с таким email уже существует");
         }
 
-        // Шифруем пароль перед сохранением
+        // Шифр
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
         return userRepository.save(user);
