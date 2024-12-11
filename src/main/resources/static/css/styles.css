@@ -4,7 +4,6 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 100vh;
   background-image: url("https://i.pinimg.com/originals/0b/33/df/0b33dfc105c1a9a00d2c333ddb8159c7.jpg");
   background-size: cover;
@@ -12,6 +11,7 @@ body {
 }
 
 .container {
+  margin-top: 30%;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -75,12 +75,13 @@ a {
   text-align: start;
 }
 .input_form input {
-  padding: 10px;
-  border-radius: 8px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 16px;
   width: 100%;
 }
 .buttons {
-  margin-top: 10px;
+  margin-top: 20px;
   width: 300px;
   display: flex;
   justify-content: space-between;
@@ -88,6 +89,6 @@ a {
   column-gap: 5px;
 }
 .buttons button:nth-child(2) {
-  border: 2px solid #333;
+  border: 2px solid #ffd700;
   background-color: transparent;
 }
