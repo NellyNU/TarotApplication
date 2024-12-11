@@ -15,7 +15,7 @@
 
   <body>
     <div id="account-form" class="container">
-      <h2>Create an Account</h2>
+      <h2>Sign Up</h2>
       <div th:if="${errorMessage}" class="error">
         <p th:text="${errorMessage}"></p>
       </div>
@@ -25,28 +25,22 @@
         method="post"
         id="account-form-fields"
       >
-        <div>
-          <label
-            >Name
-            <input type="text" th:field="*{username}" required />
-          </label>
+        <div class="input_form">
+          <p>Name</p>
+          <input type="text" th:field="*{username}" required />
           <span th:errors="*{username}" class="error"></span>
         </div>
-
-        <div>
-          <label
-            >Email:
-            <input type="email" th:field="*{email}" required />
-          </label>
+        <div class="input_form">
+          <p>Email:</p>
+          <input type="email" th:field="*{email}" required />
           <span th:errors="*{email}" class="error"></span>
-
-          <label
-            >Password
-            <input type="password" th:field="*{password}" required />
-          </label>
+        </div>
+        <div class="input_form">
+          <p>Password</p>
+          <input type="password" th:field="*{password}" required />
           <span th:errors="*{password}" class="error"></span>
         </div>
-        <button id="generate-button" type="submit">Generate Account</button>
+        <button id="generate-button" type="submit">Create</button>
       </form>
     </div>
   </body>
