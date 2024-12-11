@@ -19,7 +19,7 @@ body {
 }
 .container h2 {
   font-size: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .hidden {
   display: none;
@@ -30,10 +30,11 @@ button {
   font-size: 16px;
   cursor: pointer;
   border: none;
-  border-radius: 8px;
+  border-radius: 16px;
   background: #ffd700;
   color: white;
   font-weight: 700;
+  width: 50%;
 }
 
 button:hover {
@@ -58,7 +59,6 @@ a {
   color: rgb(177, 109, 64);
 }
 .error-message {
-  margin-bottom: 10px;
   color: red;
   font-weight: 300;
 }
@@ -74,12 +74,12 @@ a {
   text-align: start;
 }
 .input_form input {
-  margin-bottom: 5px;
   padding: 10px;
   border-radius: 8px;
   width: 100%;
 }
 .buttons {
+  margin-top: 10px;
   width: 200px;
   display: flex;
   justify-content: space-between;
@@ -87,6 +87,6 @@ a {
   column-gap: 5px;
 }
 .buttons button:nth-child(2) {
-  border-color: #333;
+  border-color: 2px solid #333;
   background-color: transparent;
 }
